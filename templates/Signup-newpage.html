@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/login_styles.css">
+</head>
+<body> -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post" class="login_form">
+ 
+    <h2 class="login"> Signup</h2>
+  
+
+  <div class="container">
+    <label class="login_label"><b>Username</b></label>
+    <input type="text" class="Input" placeholder="Enter Username" class= "Input" name="Username" value="{{Username}}">
+    <div class="error">
+       {{error_username}}
+    </div>
+
+    <label class="login_label"><b>Password</b></label>
+    <input type="password" class="Input" placeholder="Enter Password" class="Input" name="Password" value="">
+    <div class="error">
+        {{error_password}}
+    </div>
+
+    <label class="login_label"><b>Verify Password</b></label>
+    <input type="password" class="Input" placeholder="Verify Password" name="Verify" value="">
+     <div class="error">
+        {{error_verify}}
+    </div>
+
+    <label class="login_label"><b>Email(Optional)</b></label>
+    <input type="text" class="Input" name="Email" class="Input" value="{{Email}}">
+        
+    <button type="submit">Register</button>
+
+
+   
+  <!-- </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+   <div class="signup"> <button type="button" class="signupbtn" onclick="window.location.href='/signup'">Signup</button> </div>
+    
+  </div> -->
+</form>
+{% endblock %}
+
+<!-- </body>
+</html> -->
+

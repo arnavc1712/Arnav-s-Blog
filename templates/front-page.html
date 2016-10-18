@@ -1,0 +1,18 @@
+
+
+   {% extends "base.html" %}
+
+{% block content %}
+  <!-- {% if s.user %}
+  <a href="/logout" class="Logout">Logout</a>
+  {% endif %} -->
+  <div id="content">
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+
+  <div class="age">{{age}}</div>
+  </div>
+
+{% endblock %}

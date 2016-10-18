@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+   <link rel="stylesheet" href="/static/css/my_styles.css">
+   <link rel="stylesheet" href="/static/css/login_styles.css">
+  <!--  <link rel="stylesheet" href="/static/css/login_styles.css"> -->
+ 
+  	<title>Arnav's Blog!</title>
+
+  </head>
+  <body>
+
+  <div class="title">
+    <a href="/blog" class="main-title">
+    <p>Arnav's Blog</p>
+    </a>
+
+    <div class="menu">
+      <ul id="navigation_bar">
+      {% if not s.user %}
+      
+      <li class="navigation_bar_elements">
+        <a href="/login" class="navigation_bar_links">Login</a>
+      </li>
+       {% endif %}
+
+      {% if s.user %}
+      <li class="navigation_bar_elements">
+        <a href="/logout" class="navigation_bar_links">Logout</a>   
+      </li>
+      {% endif %}
+
+     
+
+      <li class="navigation_bar_elements">
+        <a href="/newpost" class="navigation_bar_links">Post</a>
+      </li>
+       <li class="navigation_bar_elements">
+        <a href="/blog" class="navigation_bar_links">Home</a>
+      </li>
+
+     
+
+      </ul>
+    </div>
+</div>    
+
+     
+     {% block content %}
+
+     {% endblock %}
+   <!--   </div> -->
+
+  </body>
+  </html>

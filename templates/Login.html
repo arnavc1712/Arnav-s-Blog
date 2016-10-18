@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/login_styles.css">
+</head> -->
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+
+<form method="post" class="login_form">
+ 
+    <h2 class="login"> Login</h2>
+  
+
+  <div class="container">
+    <label class="login_label"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" class="Input" name="username" value="{{username}}">
+
+    <label class="login_label"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" value="">
+        
+    <button type="submit">Login</button>
+
+    <div class="error">
+        {{error}}
+    </div>
+   
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+   <div class="signup"> <button type="button" class="signupbtn" onclick="window.location.href='/signup'">Signup</button> </div>
+    
+  </div>
+</form>
+{% endblock %}
+<!-- 
+</body>
+</html> -->
+
