@@ -6,6 +6,7 @@ It is built and hosted on Google’s app engine.
 Python is used as the server side language.
 Google’s Cloud is used for storing the database.
 Built on the webApp2 framework.
+Jinja2 is used as the templating engine.
 Cached the pages using memcache.
 Sets a cookie for each individual user.
 
